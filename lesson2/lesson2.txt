@@ -1,0 +1,53 @@
+Microsoft Windows [Version 10.0.18363.836]
+(c) Корпорация Майкрософт (Microsoft Corporation), 2019. Все права защищены.
+
+*** System restart required ***
+Last login: Tue May 12 20:25:55 2020 from 194.9.235.150
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+ubuntu@ip-172-31-26-92:~$ echo 'Hello world'
+Hello world
+ubuntu@ip-172-31-26-92:~$ ls -la
+total 32
+drwxr-xr-x 5 ubuntu ubuntu 4096 May 12 20:25 .
+drwxr-xr-x 3 root   root   4096 May 12 20:03 ..
+-rw-r--r-- 1 ubuntu ubuntu  220 Apr  4  2018 .bash_logout
+-rw-r--r-- 1 ubuntu ubuntu 3771 Apr  4  2018 .bashrc
+drwx------ 2 ubuntu ubuntu 4096 May 12 20:25 .cache
+drwx------ 3 ubuntu ubuntu 4096 May 12 20:25 .gnupg
+-rw-r--r-- 1 ubuntu ubuntu  807 Apr  4  2018 .profile
+drwx------ 2 ubuntu ubuntu 4096 May 12 20:03 .ssh
+ubuntu@ip-172-31-26-92:~$ ls -a
+.  ..  .bash_logout  .bashrc  .cache  .gnupg  .profile  .ssh
+ubuntu@ip-172-31-26-92:~$ mkdir first
+ubuntu@ip-172-31-26-92:~$ ls -a
+.  ..  .bash_logout  .bashrc  .cache  .gnupg  .profile  .ssh  first
+ubuntu@ip-172-31-26-92:~$ mkdir second
+ubuntu@ip-172-31-26-92:~$ ls -a
+.  ..  .bash_logout  .bashrc  .cache  .gnupg  .profile  .ssh  first  second
+ubuntu@ip-172-31-26-92:~$ cd first
+ubuntu@ip-172-31-26-92:~/first$ echo "print(1)" > first.py
+ubuntu@ip-172-31-26-92:~/first$ less first.py
+ubuntu@ip-172-31-26-92:~/first$ cd ..
+ubuntu@ip-172-31-26-92:~$ cd second
+ubuntu@ip-172-31-26-92:~/second$ echo "print(2)" > second.py
+ubuntu@ip-172-31-26-92:~/second$ less second.py
+ubuntu@ip-172-31-26-92:~/second$ mv second.py ~/first/
+ubuntu@ip-172-31-26-92:~/second$ ls -a
+.  ..
+ubuntu@ip-172-31-26-92:~/second$ cd ..
+ubuntu@ip-172-31-26-92:~$ cd first
+ubuntu@ip-172-31-26-92:~/first$ ls -a
+.  ..  first.py  second.py
+ubuntu@ip-172-31-26-92:~/first$ cd ..
+ubuntu@ip-172-31-26-92:~$ rm -r  ~/second/
+ubuntu@ip-172-31-26-92:~$ ls -a
+.  ..  .bash_logout  .bashrc  .cache  .gnupg  .profile  .ssh  first
+ubuntu@ip-172-31-26-92:~$ mv first first_second
+ubuntu@ip-172-31-26-92:~$ ls -a
+.  ..  .bash_logout  .bashrc  .cache  .gnupg  .profile  .ssh  first_second
+ubuntu@ip-172-31-26-92:~$ rm -r first_second
+ubuntu@ip-172-31-26-92:~$ ls -a
+.  ..  .bash_logout  .bashrc  .cache  .gnupg  .profile  .ssh
+ubuntu@ip-172-31-26-92:~$
